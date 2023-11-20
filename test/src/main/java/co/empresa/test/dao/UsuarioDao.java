@@ -68,7 +68,7 @@ public class UsuarioDao {
 			PreparedStatement preparedStatement = conexion.setPreparedStatement(SELECT_USUARIO_BY_ID);
 			preparedStatement.setInt(1, id);
 			
-			ResultSet rs = conexion.qwery();
+			ResultSet rs = conexion.query();
 			
 			while(rs.next()) {
 				String nombre = rs.getString("nombre");
@@ -88,7 +88,7 @@ public class UsuarioDao {
 			try {
 				PreparedStatement preparedStatement = conexion.setPreparedStatement(SELECT_ALL_USUARIOS);
 				
-				ResultSet rs = conexion.qwery();
+				ResultSet rs = conexion.query();
 				
 				while(rs.next()) {
 					int id = rs.getInt("id");
