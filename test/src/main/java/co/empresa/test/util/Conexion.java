@@ -15,7 +15,7 @@ public class Conexion {
 	
 	
 	private static final String url= "jdbc:mysql://localhost:3306/"; 
-	private static final String dbName = "prueba";
+	private static final String dbName = "sistema";
 	private static final String driver = "com.mysql. jdbc.Driver";
 	private static final String userName = "root";
 	private static final String password = "";

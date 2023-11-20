@@ -19,11 +19,11 @@ public class UsuarioDao {
 	private static final String SELECT_USUARIO_BY_ID = "SELECT * FROM usuario WHERE id =?;";
 	private static final String SELECT_ALL_USUARIOS = "SELECT * FROM usuario;";
 
-	public UsuarioDao() {
+	public UsuarioDao() throws SQLException{
 		this.conexion = Conexion.getConexion();
 	}
 	
-	public void insert(Usuario usuario) {
+	public void insert(Usuario usuario) throws SQLException{
 		try {
 			PreparedStatement preparedStatement = conexion.setPreparedStatement(INSERT_USUARIO_SQL);
 			preparedStatement.setString(1, usuario.getNombre());
@@ -36,7 +36,7 @@ public class UsuarioDao {
 		 
 	}
 	
-    public void delete (int id) {
+    public void delete (int id) throws SQLException{
 	 try {
 			PreparedStatement preparedStatement = conexion.setPreparedStatement(DELETE_USUARIO_SQL);
 			preparedStatement.setInt(1, id);
