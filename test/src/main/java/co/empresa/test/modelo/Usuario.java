@@ -12,7 +12,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class Usuario implements Serializable {
 	
-	private Integer id;
+    private Integer id;
 	
 	private String nombre;
 	
@@ -26,6 +26,52 @@ public class Usuario implements Serializable {
 		this.email = email;
 		this.pais = pais;
 	}
+
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
+	public String getNombre() {
+		return nombre;
+	}
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public String getPais() {
+		return pais;
+	}
+
+	public void setPais(String pais) {
+		this.pais = pais;
+	}
+
+	public Usuario(Integer id, String nombre, String email, String pais) {
+		super();
+		this.id = id;
+		this.nombre = nombre;
+		this.email = email;
+		this.pais = pais;
+	}
+
+	public Usuario() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	
 	
 	
 	
